@@ -1,0 +1,6 @@
+# Run file RayPdfStatistics.py !
+
+def SensorRayPdf(realDist, expectedDist):
+    SENSOR_STD_DEV = float(0.45)
+    diffNormAbs = np.abs((realDist - expectedDist) / SENSOR_STD_DEV)
+    return np.pow(2, -np.pow(diffNormAbs, 3))
